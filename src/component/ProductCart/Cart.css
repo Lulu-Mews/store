@@ -24,3 +24,11 @@
   align-items: flex-start;
   font-weight: bold;
 }
+.totalSum {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  h3 {
+    margin: 0;
+  }
+}

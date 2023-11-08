@@ -22,9 +22,15 @@ const CartOverview = () => {
 
   return (
     <>
-      <h3>"product information"</h3>
-      <h3>{state.reduce(totalPriceSum, 0)}€</h3>
-      {productElements}
+      <h1>Cart Overview</h1>
+
+      <div className="totalSum">
+        <div>{productElements}</div>
+        <div>
+          <h3>{state.reduce(totalPriceSum, 0)}€</h3>
+          blah
+        </div>
+      </div>
     </>
   );
 };
