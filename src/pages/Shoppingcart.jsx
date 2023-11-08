@@ -1,3 +1,13 @@
-const Shoppingcart = () => (<h1>Shopping Cart</h1>)
+import Header from "../component/shared/Header";
+import CartOverview from "../component/ProductCart/CartOverview";
 
-export default Shoppingcart
+const Shoppingcart = () => {
+  return (
+    <>
+      <Header />
+      <CartOverview />
+    </>
+  );
+};
+
+export default Shoppingcart;

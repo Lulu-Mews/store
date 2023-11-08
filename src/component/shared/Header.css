@@ -24,11 +24,22 @@
   margin: 0 10px;
   margin-top: 50px;
 }
-.header__basket {
-  width: 20px;
-  margin: 0 20px;
-}
 .header__login {
-  width: 20px;
-  margin: 0 20px;
+  background: #333333;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: wheat;
+  > img {
+    width: 16px;
+  }
+}
+
+.header__basket {
+  background: #333333;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: wheat;
+  > img {
+    width: 16px;
+  }
 }

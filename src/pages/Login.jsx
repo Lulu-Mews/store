@@ -1,3 +1,12 @@
-const Login = () => (<h1>Login</h1>)
+import Header from "../component/shared/Header";
 
-export default Login
+const Login = () => {
+  return (
+    <>
+      <Header />
+      login
+    </>
+  );
+};
+
+export default Login;

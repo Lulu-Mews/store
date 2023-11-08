@@ -1,19 +1,18 @@
 import React from "react";
 import "./Products.css";
-import getProducts from "../../data/products.js";
 import Product from "./Product";
+import { useGetProducts } from "../../context/productContext";
 
-async function Products() {
-  const productElements = (await getProducts()).item.map((item) => (
-    <Product {...item} />
+function Products() {
+  const products = useGetProducts();
+  const productElements = products.item.map((item) => (
+    <Product key={item.id} {...item} />
   ));
   return (
-    <>
-      <div className="products__wrapper">
-        <div className="products__fade" />
-        <div className="products__content">{productElements}</div>
-      </div>
-    </>
+    <div className="products__wrapper">
+      <div className="products__fade" />
+      <div className="products__content">{productElements}</div>
+    </div>
   );
 }
 

@@ -1,12 +1,11 @@
-import products from "./products.json";
+import { useGetProducts } from "../context/productContext";
 
-const getProducts = async (id) => {
-  console.log(products);
-  if (id) {
-    const product = products.item.find((product) => product.id === id);
-    return { item: product };
-  }
-  return products;
+const useGetProduct = (id) => {
+  const products = useGetProducts();
+  if (!id) throw new Error("missing ID in useGetProduct call");
+
+  const product = products.item.find((product) => product.id === id);
+  return { item: product };
 };
 
-export default getProducts;
+export default useGetProduct;

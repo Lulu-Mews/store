@@ -61,14 +61,12 @@
   display: flex;
   justify-content: center;
 }
-.detail__cart {
-  > button {
-    background: olive;
-    border: 1px solid olivedrab;
-    border-radius: 8px;
-    padding: 10px 10px 10px 10px;
-    color: wheat;
-  }
+.detail__button {
+  background: olive;
+  border: 1px solid olivedrab;
+  border-radius: 8px;
+  padding: 5px 10px 5px 10px;
+  color: wheat;
 }
 .detail__content {
   display: flex;

@@ -1,6 +1,18 @@
 import React from "react";
+import { useGetCarts } from "../../context/cartContext";
 
 function Detail(item) {
+  const [_, setState] = useGetCarts();
+  const clickHandler = () => {
+    setState((state) => [...state, item]);
+  };
+
+  const vatComponent = (
+    <h6>
+      BTW/VAT ({item.vat * 100}%) : {item.price * item.vat}€
+    </h6>
+  );
+
   return (
     <div className="detail__container">
       <div className="detail__wrapper">
@@ -11,12 +23,12 @@ function Detail(item) {
             <p>{item.details}</p>
           </div>
         </div>
-        <div className="detail__cart">
+        <div>
           <h3>{item.price}€</h3>
-          <h6>
-            BTW/VAT ({item.vat * 100}%) : {item.price * item.vat}€
-          </h6>
-          <button>Add to Cart</button>
+          {item.vat && vatComponent}
+          <button className="detail__button" onClick={clickHandler}>
+            add to cart
+          </button>
         </div>
       </div>
     </div>

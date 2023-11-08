@@ -1,11 +1,11 @@
 import React from "react";
 import "../ProductOverview/Products.css";
-import getProducts from "../../data/products";
 import Detail from "./Detail";
+import useGetProduct from "../../data/products";
 
-async function ProductDetails({ id }) {
+function ProductDetails({ id }) {
+  const { item } = useGetProduct(id);
   if (!id) return null;
-  const { item } = await getProducts(id);
   return <Detail {...item} />;
 }
 
