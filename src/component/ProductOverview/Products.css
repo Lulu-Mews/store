@@ -62,8 +62,8 @@
   justify-content: center;
 }
 .detail__button {
-  background: olive;
-  border: 1px solid olivedrab;
+  background: #3238fe;
+  border: 1px solid #1701c0;
   border-radius: 8px;
   padding: 5px 10px 5px 10px;
   color: wheat;

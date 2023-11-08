@@ -24,23 +24,31 @@ const CartProduct = ({ product, amount }) => {
   };
 
   return (
-    <p>
-      {product.name}
-      <button
-        className="detail__button"
-        disabled={amount === 1}
-        onClick={removeAmount}
-      >
-        -
-      </button>
-      {amount}
-      <button className="detail__button" onClick={addAmount}>
-        +
-      </button>
-      <button className="detail__button" onClick={removeAll}>
-        x
-      </button>
-    </p>
+    <div className="cartProductContainer">
+      <div className="imgNameContainer">
+        <img src={product.images[0]} className="product images" alt="" />
+        {product.name}
+      </div>
+      <div className="priceActionContainer">
+        {product.price * amount}€
+        <div>
+          <button
+            className="detail__button"
+            disabled={amount === 1}
+            onClick={removeAmount}
+          >
+            -
+          </button>
+          {amount}
+          <button className="detail__button" onClick={addAmount}>
+            +
+          </button>
+          <button className="detail__button" onClick={removeAll}>
+            x
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

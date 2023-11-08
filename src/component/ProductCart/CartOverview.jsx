@@ -6,8 +6,9 @@ const CartOverview = () => {
   console.log(state);
   const productElements = state
     .filter((a, index) => {
-      return a.name !== state[index - 1]?.name;
+      return state.indexOf(a) === index;
     })
+    .sort((a, b) => a.name > b.name)
     .map((product) => {
       const amount = state.reduce((acc, localProduct) => {
         return localProduct.name === product.name ? acc + 1 : acc;
