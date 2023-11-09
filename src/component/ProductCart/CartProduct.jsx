@@ -3,6 +3,20 @@ import { useGetCarts } from "../../context/cartContext";
 const CartProduct = ({ product, amount }) => {
   const [_, setState] = useGetCarts();
 
+  const priceFormatter = new Intl.NumberFormat("sv-SE", {
+    style: "currency",
+    currency: "SEK",
+  });
+  const vat = priceFormatter.format(product.price * product.vat);
+  const totalSum = priceFormatter.format(product.price + product.vat);
+
+  <h6>Total Pris {totalSum}</h6>;
+  const vatComponent = (
+    <h6>
+      Moms ({product.vat * 100}%) : {vat}
+    </h6>
+  );
+
   const addAmount = () => {
     setState((state) => [...state, product]);
   };
@@ -30,7 +44,7 @@ const CartProduct = ({ product, amount }) => {
         {product.name}
       </div>
       <div className="priceActionContainer">
-        {product.price * amount}€
+        {priceFormatter.format(product.price * amount)}
         <div>
           <button
             className="detail__button"

@@ -7,9 +7,15 @@ function Detail(item) {
     setState((state) => [...state, item]);
   };
 
+  const priceFormatter = new Intl.NumberFormat("sv-SE", {
+    style: "currency",
+    currency: "SEK",
+  });
+  const vat = priceFormatter.format(item.price * item.vat);
+
   const vatComponent = (
     <h6>
-      BTW/VAT ({item.vat * 100}%) : {item.price * item.vat}€
+      Moms ({item.vat * 100}%) : {vat}
     </h6>
   );
 
@@ -24,7 +30,8 @@ function Detail(item) {
           </div>
         </div>
         <div>
-          <h3>{item.price}€</h3>
+          <h3>{priceFormatter.format(item.price)}</h3>
+
           {item.vat && vatComponent}
           <button className="detail__button" onClick={clickHandler}>
             add to cart
