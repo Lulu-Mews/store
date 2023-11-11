@@ -1,4 +1,5 @@
 import { useGetCarts } from "../../context/cartContext";
+import Flex from "../shared/Flex/Flex";
 import CartProduct from "./CartProduct";
 
 const CartOverview = () => {
@@ -30,16 +31,21 @@ const CartOverview = () => {
 
   return (
     <>
-      <h1>Cart Overview</h1>
-
-      <div className="totalSum">
-        <div>{productElements}</div>
-        <div>
-          <h3>{priceFormatter.format(totalPrice + totalVat)} Pris</h3>
-          {vatComponent}
-          <h5>{priceFormatter.format(totalPrice)} exkl moms </h5>
-        </div>
-      </div>
+      <Flex justify="center">
+        <h1>Cart Overview</h1>
+      </Flex>
+      <Flex justify="center">
+        <Flex justify="space-between" width="75%">
+          <Flex isVertical width="75%">
+            {productElements}
+          </Flex>
+          <Flex isVertical width="25%">
+            <h3>{priceFormatter.format(totalPrice + totalVat)} Pris</h3>
+            {vatComponent}
+            <h5>{priceFormatter.format(totalPrice)} exkl moms </h5>
+          </Flex>
+        </Flex>
+      </Flex>
     </>
   );
 };

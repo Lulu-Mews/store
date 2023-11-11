@@ -1,5 +1,5 @@
 import Products from "../component/ProductOverview/Products";
-import Header from "../component/shared/Header";
+import Header from "../component/shared/Header/Header";
 
 const Home = () => {
   return (

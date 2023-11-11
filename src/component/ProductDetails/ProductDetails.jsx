@@ -1,5 +1,4 @@
 import React from "react";
-import "../ProductOverview/Products.css";
 import Detail from "./Detail";
 import useGetProduct from "../../data/products";
 

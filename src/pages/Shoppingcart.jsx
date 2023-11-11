@@ -1,6 +1,5 @@
-import Header from "../component/shared/Header";
+import Header from "../component/shared/Header/Header";
 import CartOverview from "../component/ProductCart/CartOverview";
-import "../component/ProductCart/Cart.css";
 const Shoppingcart = () => {
   return (
     <>

@@ -1,4 +1,7 @@
 import { useGetCarts } from "../../context/cartContext";
+import Flex from "../shared/Flex/Flex";
+import Button from "../shared/Button/Button";
+import Image from "../shared/Image/Image";
 
 const CartProduct = ({ product, amount }) => {
   const [_, setState] = useGetCarts();
@@ -38,31 +41,28 @@ const CartProduct = ({ product, amount }) => {
   };
 
   return (
-    <div className="cartProductContainer">
-      <div className="imgNameContainer">
-        <img src={product.images[0]} className="product images" alt="" />
+    <Flex spacing={{ left: "18px", bottom: "18px" }} width="60%">
+      <Flex>
+        <Image
+          width="25%"
+          spacing={{ right: "18px" }}
+          src={product.images[0]}
+          alt=""
+        />
         {product.name}
-      </div>
-      <div className="priceActionContainer">
+      </Flex>
+      <Flex align="start" isVertical>
         {priceFormatter.format(product.price * amount)}
-        <div>
-          <button
-            className="detail__button"
-            disabled={amount === 1}
-            onClick={removeAmount}
-          >
+        <Flex>
+          <Button disabled={amount === 1} onClick={removeAmount}>
             -
-          </button>
+          </Button>
           {amount}
-          <button className="detail__button" onClick={addAmount}>
-            +
-          </button>
-          <button className="detail__button" onClick={removeAll}>
-            x
-          </button>
-        </div>
-      </div>
-    </div>
+          <Button onClick={addAmount}>+</Button>
+          <Button onClick={removeAll}>x</Button>
+        </Flex>
+      </Flex>
+    </Flex>
   );
 };
 

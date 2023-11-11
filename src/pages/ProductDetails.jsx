@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Header from "../component/shared/Header";
+import Header from "../component/shared/Header/Header";
 import ProductDetailsComponent from "../component/ProductDetails/ProductDetails";
 
 const ProductDetails = () => {

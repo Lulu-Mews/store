@@ -1,5 +1,8 @@
 import React from "react";
 import { useGetCarts } from "../../context/cartContext";
+import Flex from "../shared/Flex/Flex";
+import Image from "../shared/Image/Image";
+import Button from "../shared/Button/Button";
 
 function Detail(item) {
   const [_, setState] = useGetCarts();
@@ -22,21 +25,35 @@ function Detail(item) {
   return (
     <div className="detail__container">
       <div className="detail__wrapper">
-        <div className="detail__content">
-          <img src={item.images[0]} className="detail__image" alt="" />
-          <div>
-            <h4>{item.name}</h4>
-            <p>{item.details}</p>
-          </div>
-        </div>
-        <div>
-          <h3>{priceFormatter.format(item.price)}</h3>
+        <Flex justify="center">
+          <Flex
+            width="75%"
+            justify="space-between"
+            wrap
+            className="detail__content"
+          >
+            <Flex width="50%" className="detail__content">
+              <Image
+                spacing={{ right: "18px" }}
+                width="60%"
+                src={item.images[0]}
+                className="detail__image"
+                alt=""
+              />
+              <div>
+                <h4>{item.name}</h4>
+                <p>{item.details}</p>
+              </div>
+            </Flex>
 
-          {item.vat && vatComponent}
-          <button className="detail__button" onClick={clickHandler}>
-            add to cart
-          </button>
-        </div>
+            <div>
+              <h3>{priceFormatter.format(item.price)}</h3>
+
+              {item.vat && vatComponent}
+              <Button onClick={clickHandler}>add to cart</Button>
+            </div>
+          </Flex>
+        </Flex>
       </div>
     </div>
   );

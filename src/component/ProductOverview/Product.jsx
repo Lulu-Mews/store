@@ -1,6 +1,7 @@
 import React from "react";
-import "./Products.css";
 import { useNavigate } from "react-router-dom";
+import Image from "../shared/Image/Image";
+import Flex from "../shared/Flex/Flex";
 
 function Product(item) {
   const navigate = useNavigate();
@@ -8,10 +9,15 @@ function Product(item) {
     navigate(`/product/${item.id}`);
   };
   return (
-    <div className="product__wrapper" onClick={clickHandler}>
-      <img src={item.images[0]} className="product__image" alt="" />
+    <Flex
+      width="25%"
+      isVertical
+      className="product__wrapper"
+      onClick={clickHandler}
+    >
+      <Image src={item.images[0]} className="product__image" alt="" />
       {item.description}
-    </div>
+    </Flex>
   );
 }
 

@@ -1,4 +1,4 @@
-import Header from "../component/shared/Header";
+import Header from "../component/shared/Header/Header";
 
 const Login = () => {
   return (
