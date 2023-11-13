@@ -1,5 +1,4 @@
 import React from "react";
-import searchIcon from "../../../assets/search-svgrepo-com.svg";
 import basket from "../../../assets/shopping-basket-ecommerce-svgrepo-com.svg";
 import logo from "../../../assets/flouncy_fox.svg";
 import login from "../../../assets/padlock-lock-svgrepo-com.svg";
@@ -8,6 +7,7 @@ import { StyledHeader } from "./styles";
 import Image from "../Image/Image";
 import Button from "../Button/Button";
 import Flex from "../Flex/Flex";
+import Search from "../Search/Search";
 
 function Header() {
   const navigate = useNavigate();
@@ -19,9 +19,6 @@ function Header() {
   };
   const clickLogin = () => {
     navigate(`/login`);
-  };
-  const clickSearch = () => {
-    navigate(`/`);
   };
   return (
     <StyledHeader>
@@ -35,10 +32,7 @@ function Header() {
         />
 
         <Flex spacing={{ left: "50px", bottom: "24px", right: "16px" }}>
-          <input className="header__searchInput" type="text" />
-          <Button onClick={clickSearch}>
-            <Image src={searchIcon} alt="search" width="16px" />
-          </Button>
+          <Search />
           <Button onClick={clickHandler}>
             <Image src={basket} alt="basket" width="16px" />
           </Button>

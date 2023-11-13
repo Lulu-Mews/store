@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 const getSpacing = ({ spacing }) => {
-  console.log(spacing);
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
