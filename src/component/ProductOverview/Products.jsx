@@ -9,6 +9,7 @@ function Products() {
   const query = urlParam.get("query");
   const products = useGetProducts();
   const search = decodeURI(query);
+  const isMobile = window.visualViewport.width < 500;
 
   const filterSearchFunction = (product) => {
     const searchTerms = search.split(" ");
@@ -24,12 +25,12 @@ function Products() {
     .filter(filterSearchFunction)
     .map((item) => <Product key={item.id} {...item} />);
   return (
-    <Flex justify="center" className="products__wrapper">
+    <>
       <div className="products__fade" />
-      <Flex wrap width="75%" className="products__content">
+      <Flex spacing={{ top: "24px" }} wrap width={isMobile ? "100%" : "75%"}>
         {productElements}
       </Flex>
-    </Flex>
+    </>
   );
 }
 

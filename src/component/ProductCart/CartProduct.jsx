@@ -10,15 +10,6 @@ const CartProduct = ({ product, amount }) => {
     style: "currency",
     currency: "SEK",
   });
-  const vat = priceFormatter.format(product.price * product.vat);
-  const totalSum = priceFormatter.format(product.price + product.vat);
-
-  <h6>Total Pris {totalSum}</h6>;
-  const vatComponent = (
-    <h6>
-      Moms ({product.vat * 100}%) : {vat}
-    </h6>
-  );
 
   const addAmount = () => {
     setState((state) => [...state, product]);
@@ -57,7 +48,7 @@ const CartProduct = ({ product, amount }) => {
           <Button disabled={amount === 1} onClick={removeAmount}>
             -
           </Button>
-          {amount}
+          <h2 style={{ margin: 0 }}>{amount}</h2>
           <Button onClick={addAmount}>+</Button>
           <Button onClick={removeAll}>x</Button>
         </Flex>

@@ -11,10 +11,10 @@ const getSpacing = ({ spacing }) => {
   return spacingString;
 };
 export let StyledButton = styled.button`
-  background: #3238fe;
-  border: 1px solid #1701c0;
+  background: ${({ theme }) => theme.color.primary};
+  border: 1px solid ${({ theme }) => theme.color.secondary};
   border-radius: 8px;
-  padding: 5px 10px 5px 10px;
   color: wheat;
+  ${(props) => (props?.height ? `height: ${props.height};` : "")}
   ${(props) => getSpacing(props)}
 `;

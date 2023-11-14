@@ -4,5 +4,4 @@ export let StyledHeader = styled.div`
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-bottom: 24px;
 `;
