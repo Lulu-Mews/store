@@ -43,7 +43,7 @@ const CartProduct = ({ product, amount }) => {
         <Flex width="50%">{product.description}</Flex>
       </Flex>
       <Flex align="end" width="20%" isVertical>
-        {priceFormatter.format(product.price * amount)}
+        {priceFormatter.format(product.price * amount * (product.vat + 1))}
         <Flex>
           <Button disabled={amount === 1} onClick={removeAmount}>
             -

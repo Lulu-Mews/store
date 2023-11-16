@@ -1,20 +1,18 @@
-import { createSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { ProductFilters } from "../component/ProductOverview/ProductFilters";
 import Products from "../component/ProductOverview/Products";
 import Flex from "../component/shared/Flex/Flex";
 import Header from "../component/shared/Header/Header";
 
 const Home = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const isMobile = window.visualViewport.width < 500;
-  const navigate = useNavigate();
+
   const selectSort = (e) => {
     const urlEncodedSearch = encodeURI(e.currentTarget.value);
-    navigate({
-      pathname: "/products",
-      search: createSearchParams({
-        sort: urlEncodedSearch,
-      }).toString(),
-    });
+    searchParams.set("sort", urlEncodedSearch);
+    setSearchParams(searchParams);
   };
   return (
     <>
