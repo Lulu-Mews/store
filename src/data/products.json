@@ -3,99 +3,322 @@
     {
       "id": "0",
       "name": "product 1",
-      "description": "This is a product",
+      "description": "1024TB Western Digital Black",
       "details": "details",
-      "price": 150,
+      "price": 500,
       "vat": 0.25,
-      "images": ["/assets/products/pimg1.png"]
+      "images": ["/assets/products/pimg1.png"],
+      "category": "Storage"
     },
     {
       "id": "1",
       "name": "product 2",
+      "description": "2048TB Black",
       "details": "details",
-      "price": 499,
+      "price": 1000,
       "vat": 0.25,
-      "images": ["/assets/products/pimg2.png"]
+      "images": ["/assets/products/pimg1.png"],
+      "category": "Storage"
     },
     {
       "id": "2",
       "name": "product 3",
+      "description": "3072TB Western Digital Black",
       "details": "details",
-      "price": 299,
+      "price": 1500,
       "vat": 0.25,
-      "images": ["/assets/products/pimg3.png"]
+      "images": ["/assets/products/pimg1.png"],
+      "category": "Storage"
     },
     {
       "id": "3",
       "name": "product 4",
+      "description": "4096TB Seagate Exynos",
       "details": "details",
-      "price": 199,
+      "price": 2000,
       "vat": 0.25,
-      "images": ["/assets/products/pimg4.png"]
+      "images": ["/assets/products/pimg1.png"],
+      "category": "Storage"
     },
     {
       "id": "4",
       "name": "product 5",
+      "description": "Nvidia RTX 8096 128GB GDDR10",
       "details": "details",
-      "price": 99,
+      "price": 4990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg5.png"]
+      "images": ["/assets/products/pimg2.png"],
+      "category": "Graphics"
     },
     {
       "id": "5",
       "name": "product 6",
+      "description": "Nvidia RTX 8096Ti 128GB GDDR10",
       "details": "details",
-      "price": 19,
+      "price": 8990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg6.png"]
+      "images": ["/assets/products/pimg2.png"],
+      "category": "Graphics"
     },
     {
       "id": "6",
       "name": "product 7",
+      "description": "Nvidia RTX 16384 256GB GDDR10",
       "details": "details",
-      "price": 14.9,
+      "price": 10990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg7.png"]
+      "images": ["/assets/products/pimg2.png"],
+      "category": "Graphics"
     },
     {
       "id": "7",
       "name": "product 8",
+      "description": "Nvidia RTX 16384Ti 256GB GDDR10",
       "details": "details",
-      "price": 29,
+      "price": 4990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg8.png"]
+      "images": ["/assets/products/pimg2.png"],
+      "category": "Graphics"
     },
     {
       "id": "8",
       "name": "product 9",
+      "description": "Intel i9-17600K",
       "details": "details",
-      "price": 1799,
+      "price": 2990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg9.png"]
+      "images": ["/assets/products/pimg3.png"],
+      "category": "Processors"
     },
     {
       "id": "9",
       "name": "product 10",
+      "description": "Intel i9-18600K",
       "details": "details",
-      "price": 79,
+      "price": 3990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg10.png"]
+      "images": ["/assets/products/pimg3.png"],
+      "category": "Processors"
     },
     {
       "id": "10",
       "name": "product 11",
+      "description": "Intel i9-19600K",
       "details": "details",
-      "price": 259,
+      "price": 4990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg11.png"]
+      "images": ["/assets/products/pimg3.png"],
+      "category": "Processors"
     },
     {
       "id": "11",
       "name": "product 12",
+      "description": "Intel i9-20600K",
       "details": "details",
-      "price": 289,
+      "price": 5990,
       "vat": 0.25,
-      "images": ["/assets/products/pimg12.png"]
+      "images": ["/assets/products/pimg3.png"],
+      "category": "Processors"
+    },
+    {
+      "id": "12",
+      "name": "product 13",
+      "description": "BeQuiet Pure Power 76",
+      "details": "details",
+      "price": 1990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg4.png"],
+      "category": "PSU"
+    },
+    {
+      "id": "13",
+      "name": "product 14",
+      "description": "BeQuiet Pure Power 80",
+      "details": "details",
+      "price": 2990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg4.png"],
+      "category": "PSU"
+    },
+    {
+      "id": "14",
+      "name": "product 15",
+      "description": "BeQuiet Pure Power 95",
+      "details": "details",
+      "price": 3990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg4.png"],
+      "category": "PSU"
+    },
+    {
+      "id": "15",
+      "name": "product 16",
+      "description": "BeQuiet Pure Power 100",
+      "details": "details",
+      "price": 4990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg4.png"],
+      "category": "PSU"
+    },
+    {
+      "id": "16",
+      "name": "product 17",
+      "description": "Corsair Vengeance 128GB DDR7",
+      "details": "details",
+      "price": 990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg5.png"],
+      "category": "Ram"
+    },
+    {
+      "id": "17",
+      "name": "product 18",
+      "description": "Corsair Vengeance 256GB DDR7",
+      "details": "details",
+      "price": 1990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg5.png"],
+      "category": "Ram"
+    },
+    {
+      "id": "18",
+      "name": "product 19",
+      "description": "Corsair Vengeance 512GB DDR7",
+      "details": "details",
+      "price": 2990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg5.png"],
+      "category": "Ram"
+    },
+    {
+      "id": "19",
+      "name": "product 20",
+      "description": "Corsair Vengeance 768GB DDR7",
+      "details": "details",
+      "price": 3990,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg5.png"],
+      "category": "Ram"
+    },
+    {
+      "id": "20",
+      "name": "product 21",
+      "description": "ASUS ROG OPTIMUS X7900 EXTREME",
+      "details": "details",
+      "price": 7190,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg6.png"],
+      "category": "Motherboards"
+    },
+    {
+      "id": "21",
+      "name": "product 22",
+      "description": "ASUS ROG OPTIMUS X8900 EXTREME",
+      "details": "details",
+      "price": 10190,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg6.png"],
+      "category": "Motherboards"
+    },
+    {
+      "id": "22",
+      "name": "product 23",
+      "description": "ASUS ROG OPTIMUS X9900 EXTREME",
+      "details": "details",
+      "price": 13190,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg6.png"],
+      "category": "Motherboards"
+    },
+    {
+      "id": "23",
+      "name": "product 24",
+      "description": "ASUS ROG OPTIMUS X10900 EXTREME",
+      "details": "details",
+      "price": 16190,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg6.png"],
+      "category": "Motherboards"
+    },
+    {
+      "id": "24",
+      "name": "product 25",
+      "description": "Raspberry Pi 7",
+      "details": "details",
+      "price": 370,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg7.png"],
+      "category": "SBC"
+    },
+    {
+      "id": "25",
+      "name": "product 26",
+      "description": "Raspberry Pi 8",
+      "details": "details",
+      "price": 470,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg7.png"],
+      "category": "SBC"
+    },
+    {
+      "id": "26",
+      "name": "product 27",
+      "description": "Raspberry Pi 9",
+      "details": "details",
+      "price": 570,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg7.png"],
+      "category": "SBC"
+    },
+    {
+      "id": "27",
+      "name": "product 28",
+      "description": "Raspberry Pi 10",
+      "details": "details",
+      "price": 670,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg7.png"],
+      "category": "SBC"
+    },
+    {
+      "id": "28",
+      "name": "product 29",
+      "description": "ASUS JP64 / i7-19700H / WIFI 9E ",
+      "details": "details",
+      "price": 6290,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg8.png"],
+      "category": "MiniPC"
+    },
+    {
+      "id": "29",
+      "name": "product 30",
+      "description": "ASUS JP128 / i7-20700H / WIFI 9E ",
+      "details": "details",
+      "price": 7290,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg8.png"],
+      "category": "MiniPC"
+    },
+    {
+      "id": "30",
+      "name": "product 31",
+      "description": "ASUS JP256 / i7-21700H / WIFI 9E ",
+      "details": "details",
+      "price": 8290,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg8.png"],
+      "category": "MiniPC"
+    },
+    {
+      "id": "31",
+      "name": "product 32",
+      "description": "ASUS JP512 / i7-22700H / WIFI 9E ",
+      "details": "details",
+      "price": 9290,
+      "vat": 0.25,
+      "images": ["/assets/products/pimg8.png"],
+      "category": "MiniPC"
     }
   ]
 }

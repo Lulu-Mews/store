@@ -19,5 +19,6 @@ export let StyledFlex = styled.div`
   ${(props) => (props?.isVertical ? `flex-direction: column;` : "")}
   ${(props) => (props?.wrap ? `flex-wrap: wrap;` : "")}
   ${(props) => (props?.width ? `width: ${props.width};` : "")}
+  ${(props) => (props?.height ? `height: ${props.height};` : "")}
   ${(props) => getSpacing(props)}
 `;

@@ -33,16 +33,16 @@ const CartProduct = ({ product, amount }) => {
 
   return (
     <Flex spacing={{ left: "18px", bottom: "18px" }} width="60%">
-      <Flex>
+      <Flex width="100%">
         <Image
           width="25%"
           spacing={{ right: "18px" }}
           src={product.images[0]}
           alt=""
         />
-        {product.name}
+        <Flex width="50%">{product.description}</Flex>
       </Flex>
-      <Flex align="start" isVertical>
+      <Flex align="end" width="20%" isVertical>
         {priceFormatter.format(product.price * amount)}
         <Flex>
           <Button disabled={amount === 1} onClick={removeAmount}>
