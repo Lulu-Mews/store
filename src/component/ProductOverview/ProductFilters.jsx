@@ -6,7 +6,8 @@ import { useGetProducts } from "../../context/productContext";
 import CategoryButton from "./CategoryButton";
 
 export const ProductFilters = () => {
-  const [collapsed, setCollapsed] = useState();
+  const isMobile = window.visualViewport.width < 500;
+  const [collapsed, setCollapsed] = useState(isMobile);
   const products = useGetProducts();
   const categories = products.item.reduce((acc, product) => {
     if (
@@ -19,19 +20,18 @@ export const ProductFilters = () => {
 
     return [...acc, <CategoryButton category={product.category} />];
   }, []);
-  const isMobile = window.visualViewport.width < 500;
   return (
-    <Flex
-      width={isMobile ? "100%" : "calc(20% - 24px)"}
-      spacing={!isMobile ? { right: "24px" } : {}}
-      isVertical
-    >
-      <Button height="24px" onClick={() => setCollapsed((v) => !v)}>
-        collapse
+    <>
+      <Button
+        height="24px"
+        onClick={() => setCollapsed((v) => !v)}
+        spacing={{ bottom: collapsed ? "0" : "8px" }}
+      >
+        {collapsed ? "expand" : "collapse"}
       </Button>
       <Collapse isClosed={collapsed}>
         <Flex isVertical>{categories}</Flex>
       </Collapse>
-    </Flex>
+    </>
   );
 };

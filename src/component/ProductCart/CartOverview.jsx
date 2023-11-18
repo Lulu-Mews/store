@@ -4,6 +4,7 @@ import Flex from "../shared/Flex/Flex";
 import CartProduct from "./CartProduct";
 
 const CartOverview = () => {
+  const isMobile = window.visualViewport.width < 500;
   const [state] = useGetCarts();
   const [cartProducts, setCartProducts] = useState();
   const [prices, setPrices] = useState({ prices: 0, vat: 0 });
@@ -45,11 +46,15 @@ const CartOverview = () => {
         <h1>Cart Overview</h1>
       </Flex>
       <Flex justify="center">
-        <Flex justify="space-between" width="75%">
-          <Flex isVertical width="75%">
+        <Flex
+          justify="space-between"
+          isVertical={isMobile}
+          width={isMobile ? "calc(100% - 38px)" : "75%"}
+        >
+          <Flex isVertical width={isMobile ? "100%" : "75%"}>
             {cartProducts}
           </Flex>
-          <Flex isVertical width="25%">
+          <Flex isVertical width={isMobile ? "100%" : "25%"}>
             <h3>{priceFormatter.format(prices.prices + prices.vat)} Pris</h3>
             {vatComponent}
             <h5>{priceFormatter.format(prices.prices)} exkl moms </h5>

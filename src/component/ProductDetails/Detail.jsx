@@ -5,6 +5,7 @@ import Image from "../shared/Image/Image";
 import Button from "../shared/Button/Button";
 
 function Detail(item) {
+  const isMobile = window.visualViewport.width < 500;
   const [_, setState] = useGetCarts();
   const clickHandler = () => {
     setState((state) => [...state, item]);
@@ -32,7 +33,7 @@ function Detail(item) {
             wrap
             className="detail__content"
           >
-            <Flex width="50%" className="detail__content">
+            <Flex width={isMobile ? "100%" : "50%"} className="detail__content">
               <Image
                 spacing={{ right: "18px" }}
                 width="60%"

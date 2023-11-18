@@ -20,5 +20,6 @@ export let StyledFlex = styled.div`
   ${(props) => (props?.wrap ? `flex-wrap: wrap;` : "")}
   ${(props) => (props?.width ? `width: ${props.width};` : "")}
   ${(props) => (props?.height ? `height: ${props.height};` : "")}
+  ${(props) => (props?.order ? `order: ${props.order};` : "")}
   ${(props) => getSpacing(props)}
 `;

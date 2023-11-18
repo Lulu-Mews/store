@@ -6,6 +6,7 @@ import Header from "../component/shared/Header/Header";
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const sortValue = searchParams.get("sort");
 
   const isMobile = window.visualViewport.width < 500;
 
@@ -18,12 +19,31 @@ const Home = () => {
     <>
       <Header />
       <Flex justify="center">
-        <Flex width="75%" isVertical={isMobile} wrap>
-          <ProductFilters />
-          <Products />
-          <Flex align="start">
-            <select onChange={selectSort}>
-              <option value="" disabled selected>
+        <Flex
+          width="75%"
+          isVertical={isMobile}
+          wrap
+          align={isMobile ? "end" : undefined}
+        >
+          <Flex
+            width={isMobile ? "100%" : "calc(20% - 24px)"}
+            spacing={!isMobile ? { right: "24px" } : {}}
+            isVertical
+            order={isMobile ? 2 : undefined}
+          >
+            <ProductFilters />
+          </Flex>
+          <Flex
+            spacing={{ top: "24px" }}
+            wrap
+            width={isMobile ? "100%" : "70%"}
+            order={isMobile ? 3 : undefined}
+          >
+            <Products />
+          </Flex>
+          <Flex align="start" order={isMobile ? 1 : undefined}>
+            <select onChange={selectSort} defaultValue={sortValue}>
+              <option value="" disabled>
                 Sort by:
               </option>
               <option value="priceDesc">priceDesc</option>

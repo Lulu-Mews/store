@@ -4,6 +4,7 @@ import Button from "../shared/Button/Button";
 import Image from "../shared/Image/Image";
 
 const CartProduct = ({ product, amount }) => {
+  const isMobile = window.visualViewport.width < 500;
   const [_, setState] = useGetCarts();
 
   const priceFormatter = new Intl.NumberFormat("sv-SE", {
@@ -32,7 +33,10 @@ const CartProduct = ({ product, amount }) => {
   };
 
   return (
-    <Flex spacing={{ left: "18px", bottom: "18px" }} width="60%">
+    <Flex
+      spacing={{ left: isMobile ? "0px" : "18px", bottom: "18px" }}
+      width={isMobile ? "100%" : "60%"}
+    >
       <Flex width="100%">
         <Image
           width="25%"

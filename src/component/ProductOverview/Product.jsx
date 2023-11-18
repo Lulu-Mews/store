@@ -4,6 +4,7 @@ import Image from "../shared/Image/Image";
 import Flex from "../shared/Flex/Flex";
 
 function Product(item) {
+  const isMobile = window.visualViewport.width < 500;
   const navigate = useNavigate();
   const clickHandler = () => {
     navigate(`/product/${item.id}`);
@@ -14,7 +15,7 @@ function Product(item) {
   });
   return (
     <Flex
-      width="calc(25% - 16px)"
+      width={isMobile ? "100%" : "calc(25% - 16px)"}
       isVertical
       spacing={{ right: "16px", bottom: "16px" }}
       onClick={clickHandler}

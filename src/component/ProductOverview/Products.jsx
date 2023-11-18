@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "./Product";
 import { useGetProducts } from "../../context/productContext";
-import Flex from "../shared/Flex/Flex";
 import { useParams, useSearchParams } from "react-router-dom";
 
 function Products() {
@@ -11,7 +10,6 @@ function Products() {
   const { category } = useParams();
   const products = useGetProducts();
   const search = decodeURI(query);
-  const isMobile = window.visualViewport.width < 500;
 
   const filterSearchFunction = (product) => {
     const searchTerms = search.split(" ");
@@ -36,14 +34,7 @@ function Products() {
     .filter((product) => (category ? product.category === category : true))
     .sort(sortFunction)
     .map((item) => <Product key={item.id} {...item} />);
-  return (
-    <>
-      <div className="products__fade" />
-      <Flex spacing={{ top: "24px" }} wrap width={isMobile ? "100%" : "70%"}>
-        {productElements}
-      </Flex>
-    </>
-  );
+  return <>{productElements}</>;
 }
 
 export default Products;
