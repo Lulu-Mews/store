@@ -6,17 +6,26 @@ import Flex from "../shared/Flex/Flex";
 
 function CheckoutWrapper() {
   const [user, setUser] = useState({});
+  const [hasPressedOrder, setHasPressedOrder] = useState(false);
   const [delivery, setDelivery] = useState();
   const isMobile = window.visualViewport.width < 500;
   return (
     <Flex justify="center">
       <Flex align="start" width="60%">
         <Flex isVertical width={isMobile ? "100%" : "15%"}>
-          <CheckoutForm setUser={setUser} user={user} />
+          <CheckoutForm
+            setUser={setUser}
+            hasPressedOrder={hasPressedOrder}
+            user={user}
+          />
         </Flex>
         <CheckoutDelivery setDelivery={setDelivery} />
         <Flex align="start">
-          <CheckoutOrder user={user} delivery={delivery} />
+          <CheckoutOrder
+            user={user}
+            delivery={delivery}
+            setHasPressedOrder={setHasPressedOrder}
+          />
         </Flex>
       </Flex>
     </Flex>
