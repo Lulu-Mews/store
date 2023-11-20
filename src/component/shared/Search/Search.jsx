@@ -23,14 +23,14 @@ function Search() {
     });
   };
   const handleKeyPress = (event) => {
-    if (event.key == "Enter") clickSearch();
+    if (event.key === "Enter") clickSearch();
     console.log("handleKeyPress");
   };
   return (
     <Flex>
       <input
         onKeyPress={handleKeyPress}
-        value={search}
+        value={search || ""}
         onChange={(e) => setSearchText(e.currentTarget.value)}
         className="header__searchInput"
         type="text"

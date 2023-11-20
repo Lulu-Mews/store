@@ -10,6 +10,7 @@ import { CartProvider } from "./context/cartContext";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./data/theme.json";
 import Fade from "./component/shared/Fade/Fade";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -35,7 +36,8 @@ const App = () => {
               <Route path="products" element={<Home />} />
               <Route path="product/:id" element={<ProductDetails />} />
               <Route path="products/:category" element={<Home />} />
-              <Route path="checkout" element={<Shoppingcart />} />
+              <Route path="order" element={<Shoppingcart />} />
+              <Route path="checkout" element={<Checkout />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>

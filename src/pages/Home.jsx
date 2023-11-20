@@ -22,7 +22,7 @@ const Home = () => {
         <Flex
           width="75%"
           isVertical={isMobile}
-          wrap
+          isWrapping
           align={isMobile ? "end" : undefined}
         >
           <Flex
@@ -35,7 +35,7 @@ const Home = () => {
           </Flex>
           <Flex
             spacing={{ top: "24px" }}
-            wrap
+            isWrapping
             width={isMobile ? "100%" : "70%"}
             order={isMobile ? 3 : undefined}
           >
@@ -46,10 +46,18 @@ const Home = () => {
               <option value="" disabled>
                 Sort by:
               </option>
-              <option value="priceDesc">priceDesc</option>
-              <option value="priceAsc">priceAsc</option>
-              <option value="nameDesc">nameDesc</option>
-              <option value="nameAsc">nameAsc</option>
+              <option key="priceDesc" value="priceDesc">
+                priceDesc
+              </option>
+              <option key="priceAsc" value="priceAsc">
+                priceAsc
+              </option>
+              <option key="nameDesc" value="nameDesc">
+                nameDesc
+              </option>
+              <option key="nameAsc" value="nameAsc">
+                nameAsc
+              </option>
             </select>
           </Flex>
         </Flex>

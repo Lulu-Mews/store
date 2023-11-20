@@ -17,9 +17,10 @@ export let StyledFlex = styled.div`
   ${(props) => (props?.align ? `align-items: ${props?.align};` : "")}
   ${(props) => (props?.justify ? `justify-content: ${props?.justify};` : "")}
   ${(props) => (props?.isVertical ? `flex-direction: column;` : "")}
-  ${(props) => (props?.wrap ? `flex-wrap: wrap;` : "")}
+  ${(props) => (props?.isWrapping ? `flex-wrap: wrap;` : "")}
   ${(props) => (props?.width ? `width: ${props.width};` : "")}
   ${(props) => (props?.height ? `height: ${props.height};` : "")}
   ${(props) => (props?.order ? `order: ${props.order};` : "")}
+  ${(props) => (props?.flex ? `flex: ${props.flex};` : "")}
   ${(props) => getSpacing(props)}
 `;

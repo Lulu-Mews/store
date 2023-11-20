@@ -6,7 +6,7 @@ import Button from "../shared/Button/Button";
 
 function Detail(item) {
   const isMobile = window.visualViewport.width < 500;
-  const [_, setState] = useGetCarts();
+  const [, setState] = useGetCarts();
   const clickHandler = () => {
     setState((state) => [...state, item]);
   };
@@ -30,7 +30,7 @@ function Detail(item) {
           <Flex
             width="75%"
             justify="space-between"
-            wrap
+            isWrapping
             className="detail__content"
           >
             <Flex width={isMobile ? "100%" : "50%"} className="detail__content">

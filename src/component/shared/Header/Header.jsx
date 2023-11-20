@@ -12,7 +12,7 @@ import Search from "../Search/Search";
 function Header() {
   const navigate = useNavigate();
   const clickHandler = () => {
-    navigate(`/checkout/`);
+    navigate(`/order/`);
   };
   const clickHome = () => {
     navigate(`/`);
@@ -22,7 +22,7 @@ function Header() {
   };
   return (
     <StyledHeader>
-      <Flex wrap align="end" justify="space-between">
+      <Flex isWrapping align="end" justify="space-between">
         <Image
           width="280px"
           onClick={clickHome}
@@ -36,7 +36,7 @@ function Header() {
           <Button onClick={clickHandler}>
             <Image src={basket} alt="basket" width="16px" />
           </Button>
-          <Button onClick={clickLogin} alt="login">
+          <Button onClick={clickLogin}>
             <Image src={login} alt="login" width="16px" />
           </Button>
         </Flex>

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useGetCarts } from "../../context/cartContext";
 import Flex from "../shared/Flex/Flex";
 import CartProduct from "./CartProduct";
+import Button from "../shared/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const CartOverview = () => {
   const isMobile = window.visualViewport.width < 500;
@@ -27,7 +29,9 @@ const CartOverview = () => {
             vat: localprice.vat + product.vat * amount * product.price,
           };
         });
-        return <CartProduct product={product} amount={amount} />;
+        return (
+          <CartProduct key={product.id} product={product} amount={amount} />
+        );
       });
     setCartProducts(productElements);
   }, [state]);
@@ -37,9 +41,11 @@ const CartOverview = () => {
     currency: "SEK",
   });
   const vat = priceFormatter.format(prices.vat);
-
+  const navigate = useNavigate();
   const vatComponent = <h6>{vat} moms</h6>;
-
+  const clickCheckout = () => {
+    navigate(`/checkout`);
+  };
   return (
     <>
       <Flex justify="center">
@@ -58,6 +64,7 @@ const CartOverview = () => {
             <h3>{priceFormatter.format(prices.prices + prices.vat)} Pris</h3>
             {vatComponent}
             <h5>{priceFormatter.format(prices.prices)} exkl moms </h5>
+            <Button onClick={clickCheckout}>Checkout</Button>
           </Flex>
         </Flex>
       </Flex>

@@ -18,7 +18,10 @@ export const ProductFilters = () => {
     )
       return acc;
 
-    return [...acc, <CategoryButton category={product.category} />];
+    return [
+      ...acc,
+      <CategoryButton key={product.category} category={product.category} />,
+    ];
   }, []);
   return (
     <>
