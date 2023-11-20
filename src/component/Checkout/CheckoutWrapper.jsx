@@ -12,7 +12,7 @@ function CheckoutWrapper() {
     <Flex justify="center">
       <Flex align="start" width="60%">
         <Flex isVertical width={isMobile ? "100%" : "15%"}>
-          <CheckoutForm setUser={setUser} />
+          <CheckoutForm setUser={setUser} user={user} />
         </Flex>
         <CheckoutDelivery setDelivery={setDelivery} />
         <Flex align="start">

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CheckoutForm = ({ setUser }) => {
+const CheckoutForm = ({ user, setUser }) => {
   const inputChange = (e, name) => {
     const value = e.currentTarget.value;
 
@@ -11,49 +11,49 @@ const CheckoutForm = ({ setUser }) => {
   return (
     <>
       <input
-        value=""
+        value={user?.firstName}
         onChange={(e) => inputChange(e, "firstName")}
         type="text"
         placeholder="First Name"
       />
       <input
-        value=""
+        value={user?.lastName}
         onChange={(e) => inputChange(e, "lastName")}
         type="text"
         placeholder="Last Name"
       />
       <input
-        value=""
+        value={user?.eMail}
         onChange={(e) => inputChange(e, "eMail")}
         type="email"
         placeholder="E-mail"
       />
       <input
-        value=""
+        value={user?.telephone}
         onChange={(e) => inputChange(e, "telephone")}
         type="text"
         placeholder="Telephone"
       />
       <input
-        value=""
+        value={user?.postalCode}
         onChange={(e) => inputChange(e, "postalCode")}
         type="text"
         placeholder="Postal Code"
       />
       <input
-        value=""
+        value={user?.houseNumber}
         onChange={(e) => inputChange(e, "houseNumber")}
         type="text"
         placeholder="House Number"
       />
       <input
-        value=""
+        value={user?.city}
         onChange={(e) => inputChange(e, "city")}
         type="text"
         placeholder="City"
       />
       <input
-        value=""
+        value={user?.street}
         onChange={(e) => inputChange(e, "street")}
         type="text"
         placeholder="Street"
