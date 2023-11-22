@@ -3,6 +3,7 @@ import { useGetCarts } from "../../context/cartContext";
 import Flex from "../shared/Flex/Flex";
 import Image from "../shared/Image/Image";
 import Button from "../shared/Button/Button";
+import Border from "../shared/Border/Border";
 
 function Detail(item) {
   const isMobile = window.visualViewport.width < 500;
@@ -33,18 +34,33 @@ function Detail(item) {
             isWrapping
             className="detail__content"
           >
-            <Flex width={isMobile ? "100%" : "50%"} className="detail__content">
+            <Flex
+              isVertical={isMobile}
+              width={isMobile ? "100%" : "50%"}
+              className="detail__content"
+            >
               <Image
                 spacing={{ right: "18px" }}
-                width="60%"
+                width={isMobile ? "100%" : "60%"}
                 src={item.images[0]}
                 className="detail__image"
                 alt=""
               />
-              <div>
-                <h4>{item.name}</h4>
-                <p>{item.details}</p>
-              </div>
+              <Border border="2px solid black">
+                <div>
+                  <Border border="1px ridge black">
+                    <Flex spacing={{ left: "18px", right: "18px" }}>
+                      <h4>{item.description}</h4>
+                    </Flex>
+                  </Border>
+
+                  <Border borderTop="2px solid black">
+                    <Flex spacing={{ left: "18px", right: "18px" }}>
+                      <p>{item.details}</p>
+                    </Flex>
+                  </Border>
+                </div>
+              </Border>
             </Flex>
 
             <div>

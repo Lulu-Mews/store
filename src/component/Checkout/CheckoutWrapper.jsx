@@ -11,7 +11,7 @@ function CheckoutWrapper() {
   const isMobile = window.visualViewport.width < 500;
   return (
     <Flex justify="center">
-      <Flex align="start" width="60%">
+      <Flex isVertical={isMobile} align="start" width="60%">
         <Flex isVertical width={isMobile ? "100%" : "15%"}>
           <CheckoutForm
             setUser={setUser}
