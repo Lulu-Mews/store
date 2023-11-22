@@ -1,7 +1,9 @@
 import React from "react";
 import Flex from "../shared/Flex/Flex";
+import Text from "../shared/Text/Text";
+import { validateDelivery } from "./validators";
 
-function CheckoutDelivery({ setDelivery }) {
+function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
   return (
     <Flex isVertical>
       <Flex>
@@ -44,6 +46,9 @@ function CheckoutDelivery({ setDelivery }) {
         />
         <label htmlFor="fedex">Fedex</label>
       </Flex>
+      <Text fontSize="10px" color="red">
+        {hasPressedOrder && validateDelivery(delivery)}
+      </Text>
     </Flex>
   );
 }

@@ -6,3 +6,5 @@ export { default as validateLastName } from "./validateLastName";
 export { default as validatePostalCode } from "./validatePostalCode";
 export { default as validateStreet } from "./validateStreet";
 export { default as validateTelephone } from "./validateTelephone";
+export { default as validateUser } from "./validateUser";
+export { default as validateDelivery } from "./validateDelivery";

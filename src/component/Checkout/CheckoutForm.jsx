@@ -30,6 +30,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateFirstName(user)}
       </Text>
+
       <input
         value={user?.lastName || ""}
         onChange={(e) => inputChange(e, "lastName")}
@@ -39,6 +40,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateLastName(user)}
       </Text>
+
       <input
         value={user?.eMail || ""}
         onChange={(e) => inputChange(e, "eMail")}
@@ -48,6 +50,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateEmail(user)}
       </Text>
+
       <input
         value={user?.telephone || ""}
         onChange={(e) => inputChange(e, "telephone")}
@@ -57,6 +60,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateTelephone(user)}
       </Text>
+
       <input
         value={user?.postalCode || ""}
         onChange={(e) => inputChange(e, "postalCode")}
@@ -66,15 +70,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validatePostalCode(user)}
       </Text>
-      <input
-        value={user?.houseNumber || ""}
-        onChange={(e) => inputChange(e, "houseNumber")}
-        type="text"
-        placeholder="House Number"
-      />
-      <Text fontSize="10px" color="red">
-        {hasPressedOrder && validateHouseNumber(user)}
-      </Text>
+
       <input
         value={user?.city || ""}
         onChange={(e) => inputChange(e, "city")}
@@ -84,6 +80,7 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateCity(user)}
       </Text>
+
       <input
         value={user?.street || ""}
         onChange={(e) => inputChange(e, "street")}
@@ -92,6 +89,16 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       />
       <Text fontSize="10px" color="red">
         {hasPressedOrder && validateStreet(user)}
+      </Text>
+
+      <input
+        value={user?.houseNumber || ""}
+        onChange={(e) => inputChange(e, "houseNumber")}
+        type="text"
+        placeholder="House Number"
+      />
+      <Text fontSize="10px" color="red">
+        {hasPressedOrder && validateHouseNumber(user)}
       </Text>
     </>
   );

@@ -19,7 +19,11 @@ function CheckoutWrapper() {
             user={user}
           />
         </Flex>
-        <CheckoutDelivery setDelivery={setDelivery} />
+        <CheckoutDelivery
+          setDelivery={setDelivery}
+          hasPressedOrder={hasPressedOrder}
+          delivery={delivery}
+        />
         <Flex align="start">
           <CheckoutOrder
             user={user}
