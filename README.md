@@ -1,6 +1,14 @@
 ## Store
 
-to run this project:
+to run this project use either of the two:
+
+Yarn Commands:
+
+`yarn`
+
+`yarn start`
+
+NPM commands:
 
 `npm install`
 
