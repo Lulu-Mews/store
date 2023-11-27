@@ -20,6 +20,9 @@ function Header() {
   const clickLogin = () => {
     navigate(`/login`);
   };
+  const clickStl = () => {
+    navigate(`/stlviewer`);
+  };
   return (
     <StyledHeader>
       <Flex isWrapping align="end" justify="space-between">
@@ -39,6 +42,7 @@ function Header() {
           <Button onClick={clickLogin}>
             <Image src={login} alt="login" width="16px" />
           </Button>
+          <Button onClick={clickStl}>StlViewer / WebGL</Button>
         </Flex>
       </Flex>
     </StyledHeader>

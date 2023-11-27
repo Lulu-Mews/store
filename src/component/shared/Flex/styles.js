@@ -5,7 +5,7 @@ const getSpacing = ({ spacing }) => {
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
 
-  if (top) spacingString += `margin-top: ${top};`;
+  if (top) spacingString += `padding-top: ${top};`;
   if (bottom) spacingString += `margin-bottom: ${bottom};`;
   if (right) spacingString += `margin-right: ${right};`;
   if (left) spacingString += `margin-left: ${left};`;
