@@ -12,6 +12,7 @@ import theme from "./data/theme.json";
 import Fade from "./component/shared/Fade/Fade";
 import Checkout from "./pages/Checkout";
 import Invoice from "./pages/Invoice";
+import StlViewer from "./pages/StlViewer";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
               <Route path="order" element={<Shoppingcart />} />
               <Route path="checkout" element={<Checkout />} />
               <Route path="invoice" element={<Invoice />} />
+              <Route path="stlviewer" element={<StlViewer />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
