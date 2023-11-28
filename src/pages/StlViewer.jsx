@@ -6,12 +6,7 @@ const StlViewer = () => {
   return (
     <>
       <Header />
-      <Flex
-        isVertical
-        align="center"
-        justify="center"
-        spacing={{ top: "10px" }}
-      >
+      <Flex align="start" justify="center" spacing={{ top: "10px" }}>
         <StlLoader />
       </Flex>
     </>
