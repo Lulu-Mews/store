@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { BorderProps, SpacingProps } from "./Interfaces";
 
-const getSpacing = ({ spacing }) => {
+const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
@@ -12,7 +13,7 @@ const getSpacing = ({ spacing }) => {
   return spacingString;
 };
 
-export let StyledBorder = styled.div`
+export let StyledBorder = styled.div<BorderProps & SpacingProps>`
   ${(props) => (props?.border ? `border: ${props.border};` : "")}
   ${(props) => (props?.borderTop ? `border-top: ${props.borderTop};` : "")}
 ${(props) => (props?.borderRight ? `border-right: ${props.borderRight};` : "")}

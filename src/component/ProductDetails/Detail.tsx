@@ -5,11 +5,11 @@ import Image from "../shared/Image/Image";
 import Button from "../shared/Button/Button";
 import Border from "../shared/Border/Border";
 
-function Detail(item) {
-  const isMobile = window.visualViewport.width < 500;
+function Detail(item: any) {
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   const [, setState] = useGetCarts();
   const clickHandler = () => {
-    setState((state) => [...state, item]);
+    setState?.((state) => [...state, item]);
   };
 
   const priceFormatter = new Intl.NumberFormat("sv-SE", {
