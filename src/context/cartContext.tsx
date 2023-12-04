@@ -7,24 +7,16 @@ import {
   useEffect,
   useState,
 } from "react";
-interface CartContextProps {
-  id?: string;
-  name?: string;
-  description?: string;
-  details?: string;
-  price?: number;
-  vat?: number;
-  images?: string[];
-  category?: string;
-}
+import { Product } from "../interfaces";
+
 type CartStateProps = [
-  CartContextProps[] | undefined,
-  Dispatch<SetStateAction<CartContextProps[]>> | undefined
+  Product[] | undefined,
+  Dispatch<SetStateAction<Product[]>> | undefined
 ];
 const CartContext = createContext<CartStateProps>([undefined, undefined]);
 
 export const CartProvider: React.FC<
-  PropsWithChildren<{ initialState: CartContextProps[] }>
+  PropsWithChildren<{ initialState: Product[] }>
 > = ({ children, initialState }) => {
   const [state, setState] = useState(initialState);
 

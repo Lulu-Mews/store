@@ -17,7 +17,7 @@ import StlViewer from "./pages/StlViewer";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ProductProvider initialState={products}>
+      <ProductProvider initialState={products.item}>
         <CartProvider initialState={[]}>
           <Fade
             width="100%"
