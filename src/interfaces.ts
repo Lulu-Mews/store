@@ -8,3 +8,12 @@ export interface Product {
   images?: string[];
   category?: string;
 }
+
+export interface SpacingProps {
+  spacing?: {
+    top?: string;
+    right?: string;
+    bottom?: string;
+    left?: string;
+  };
+}

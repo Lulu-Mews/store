@@ -1,11 +1,5 @@
-export interface SpacingProps {
-  spacing?: {
-    top?: string;
-    right?: string;
-    bottom?: string;
-    left?: string;
-  };
-}
+import { SpacingProps } from "../../../interfaces";
+
 export interface BorderProps {
   border?: string;
   borderTop?: string;

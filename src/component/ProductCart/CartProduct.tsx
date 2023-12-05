@@ -2,9 +2,13 @@ import { useGetCarts } from "../../context/cartContext";
 import Flex from "../shared/Flex/Flex";
 import Button from "../shared/Button/Button";
 import Image from "../shared/Image/Image";
+import { Product } from "../../interfaces";
 
-const CartProduct = ({ product, amount }) => {
-  const isMobile = window.visualViewport.width < 500;
+const CartProduct: React.FC<{ product: Product; amount: number }> = ({
+  product,
+  amount,
+}) => {
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   const [_, setState] = useGetCarts();
 
   const priceFormatter = new Intl.NumberFormat("sv-SE", {
@@ -13,11 +17,11 @@ const CartProduct = ({ product, amount }) => {
   });
 
   const addAmount = () => {
-    setState((state) => [...state, product]);
+    setState?.((state) => [...state, product]);
   };
 
   const removeAmount = () => {
-    setState((state) => {
+    setState?.((state) => {
       // get the first item that is the current product
       const firstIndex = state.findIndex((e) => e.id === product.id);
       // remove that item by filtering the array to return everything except that item
@@ -26,7 +30,7 @@ const CartProduct = ({ product, amount }) => {
   };
 
   const removeAll = () => {
-    setState((state) => {
+    setState?.((state) => {
       // remove all items that have the same id
       return state.filter((localProduct) => localProduct.id !== product.id);
     });
@@ -41,13 +45,15 @@ const CartProduct = ({ product, amount }) => {
         <Image
           width="25%"
           spacing={{ right: "18px" }}
-          src={product.images[0]}
+          src={product.images?.[0]}
           alt=""
         />
         <Flex width="50%">{product.description}</Flex>
       </Flex>
       <Flex align="end" width="20%" isVertical>
-        {priceFormatter.format(product.price * amount * (product.vat + 1))}
+        {priceFormatter.format(
+          (product.price || 0) * amount * ((product.vat || 0) + 1)
+        )}
         <Flex>
           <Button disabled={amount === 1} onClick={removeAmount}>
             -

@@ -3,15 +3,15 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
 import Border from "../shared/Border/Border";
-import { FileDropper } from "../FileDropper/FileDropper";
+import { FileDropper } from "../shared/FileDropper/FileDropper";
 import Button from "../shared/Button/Button";
 import getModel from "./Helpers/getModel";
 import Flex from "../shared/Flex/Flex";
 
 function StlLoader() {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   const [wireframe, setWireframe] = useState(false);
-  const [stlFile, setStlFile] = useState();
+  const [stlFile, setStlFile] = useState<ArrayBuffer | undefined>();
   const scene = new THREE.Scene();
   scene.add(new THREE.AxesHelper(5));
 
@@ -51,17 +51,20 @@ function StlLoader() {
   }
 
   useEffect(() => {
-    ref.current.innerHTML = "";
-    ref.current.appendChild(renderer.domElement);
+    if (ref.current) {
+      ref.current.innerHTML = "";
+      ref.current.appendChild(renderer.domElement);
 
-    const loader = new STLLoader();
-    if (stlFile) {
-      const geometry = loader.parse(stlFile);
-      scene.add(getModel(geometry, wireframe));
+      const loader = new STLLoader();
+      if (stlFile) {
+        const geometry = loader.parse(stlFile);
+        scene.add(getModel(geometry, wireframe));
+      }
+      renderer.render(scene, camera);
+
+      animate();
     }
-    renderer.render(scene, camera);
-
-    animate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref.current, stlFile, wireframe]);
 
   return (

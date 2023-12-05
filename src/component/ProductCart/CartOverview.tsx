@@ -4,36 +4,38 @@ import Flex from "../shared/Flex/Flex";
 import CartProduct from "./CartProduct";
 import Button from "../shared/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { Product } from "../../interfaces";
 
 const CartOverview = () => {
-  const isMobile = window.visualViewport.width < 500;
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   const [state] = useGetCarts();
-  const [cartProducts, setCartProducts] = useState();
+  const [cartProducts, setCartProducts] = useState<JSX.Element[]>([]);
   const [prices, setPrices] = useState({ prices: 0, vat: 0 });
   useEffect(() => {
     setPrices({ prices: 0, vat: 0 });
     const productElements = state
-
-      .reduce((acc, curr) => {
+      ?.reduce((acc, curr) => {
         if (!acc.find((a) => a.id === curr.id)) acc.push(curr);
         return acc;
-      }, [])
-      .sort((a, b) => a.name > b.name)
+      }, [] as Product[])
+      .sort((a, b) => ((a.name || "") > (b.name || "") ? -1 : 1))
       .map((product) => {
         const amount = state.reduce((acc, localProduct) => {
           return localProduct.name === product.name ? acc + 1 : acc;
         }, 0);
         setPrices((localprice) => {
           return {
-            prices: localprice.prices + product.price * amount,
-            vat: localprice.vat + product.vat * amount * product.price,
+            prices: localprice.prices + (product.price || 0) * amount,
+            vat:
+              localprice.vat +
+              (product.vat || 0) * amount * (product.price || 0),
           };
         });
         return (
           <CartProduct key={product.id} product={product} amount={amount} />
         );
       });
-    setCartProducts(productElements);
+    if (productElements) setCartProducts(productElements);
   }, [state]);
 
   const priceFormatter = new Intl.NumberFormat("sv-SE", {

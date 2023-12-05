@@ -1,5 +1,5 @@
 import { useGetProducts } from "../context/productContext";
-const useGetProduct = (id: string) => {
+const useGetProduct = (id?: string) => {
   const products = useGetProducts();
   if (!id) throw new Error("missing ID in useGetProduct call");
 

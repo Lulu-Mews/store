@@ -6,10 +6,10 @@ import { useGetProducts } from "../../context/productContext";
 import CategoryButton from "./CategoryButton";
 
 export const ProductFilters = () => {
-  const isMobile = window.visualViewport.width < 500;
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   const [collapsed, setCollapsed] = useState(isMobile);
   const products = useGetProducts();
-  const categories = products.item.reduce((acc, product) => {
+  const categories = products?.reduce((acc, product) => {
     if (
       !product?.category ||
       acc.findIndex(
@@ -22,7 +22,7 @@ export const ProductFilters = () => {
       ...acc,
       <CategoryButton key={product.category} category={product.category} />,
     ];
-  }, []);
+  }, [] as JSX.Element[]);
   return (
     <>
       <Button

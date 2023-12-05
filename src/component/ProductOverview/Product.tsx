@@ -2,9 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Image from "../shared/Image/Image";
 import Flex from "../shared/Flex/Flex";
+import { Product as ProductProp } from "../../interfaces";
 
-function Product(item) {
-  const isMobile = window.visualViewport.width < 500;
+const Product: React.FC<ProductProp> = (item) => {
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   const navigate = useNavigate();
   const clickHandler = () => {
     navigate(`/product/${item.id}`);
@@ -20,16 +21,16 @@ function Product(item) {
       spacing={{ right: "16px", bottom: "16px" }}
       onClick={clickHandler}
     >
-      <Image src={item.images[0]} alt="" />
+      {item.images?.[0] && <Image src={item.images[0]} alt="" />}
       <Flex height="100%" isVertical justify="space-between">
         <h6 style={{ margin: 0 }}>{item.description}</h6>
         <Flex justify="end" align="end" isVertical>
-          {priceFormatter.format(item.price)}
+          {priceFormatter.format(item.price || 0)}
           <h6 style={{ margin: 0 }}>{item.category}</h6>
         </Flex>
       </Flex>
     </Flex>
   );
-}
+};
 
 export default Product;

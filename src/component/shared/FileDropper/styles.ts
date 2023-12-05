@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { SpacingProps } from "../../../interfaces";
 
-const getSpacing = ({ spacing }) => {
+const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
@@ -12,7 +13,9 @@ const getSpacing = ({ spacing }) => {
   return spacingString;
 };
 
-export let StyledFileDropper = styled.div`
+export let StyledFileDropper = styled.div<
+  SpacingProps & { hovering?: boolean }
+>`
   ${(props) => getSpacing(props)}
   ${(props) => (props.hovering ? "background-color:black;" : "")}
 `;

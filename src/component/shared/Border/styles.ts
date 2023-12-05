@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { BorderProps, SpacingProps } from "./Interfaces";
+import { BorderProps } from "./interfaces";
+import { SpacingProps } from "../../../interfaces";
 
 const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";

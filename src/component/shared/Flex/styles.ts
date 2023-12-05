@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
+import { FlexProps } from "./interface";
+import { SpacingProps } from "../../../interfaces";
 
-const getSpacing = ({ spacing }) => {
+const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
@@ -12,7 +14,7 @@ const getSpacing = ({ spacing }) => {
   return spacingString;
 };
 
-export let StyledFlex = styled.div`
+export let StyledFlex = styled.div<FlexProps & SpacingProps>`
   display: flex;
   ${(props) => (props?.align ? `align-items: ${props?.align};` : "")}
   ${(props) => (props?.justify ? `justify-content: ${props?.justify};` : "")}
