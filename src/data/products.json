@@ -2,8 +2,7 @@
   "item": [
     {
       "id": "0",
-      "name": "product 1",
-      "description": "1024TB Western Digital Black",
+      "name": "1024TB Western Digital Black",
       "details": "reliable harddrive for long term storage",
       "price": 500,
       "vat": 0.25,
@@ -12,8 +11,7 @@
     },
     {
       "id": "1",
-      "name": "product 2",
-      "description": "2048TB Western Digital Black",
+      "name": "2048TB Western Digital Black",
       "details": "fast has just gotten faster with this harddrive from Western Digital",
       "price": 1000,
       "vat": 0.25,
@@ -22,8 +20,7 @@
     },
     {
       "id": "2",
-      "name": "product 3",
-      "description": "3072TB Western Digital Black",
+      "name": "3072TB Western Digital Black",
       "details": "have the best of two worlds with this harddrive that supports high read and writes and reliable long term storage",
       "price": 1500,
       "vat": 0.25,
@@ -32,8 +29,7 @@
     },
     {
       "id": "3",
-      "name": "product 4",
-      "description": "4096TB Seagate Exynos",
+      "name": "4096TB Seagate Exynos",
       "details": "have your own datacenter at home with this Seagete Exynos",
       "price": 2000,
       "vat": 0.25,
@@ -42,8 +38,7 @@
     },
     {
       "id": "4",
-      "name": "product 5",
-      "description": "Nvidia RTX 8096 128GB GDDR10",
+      "name": "Nvidia RTX 8096 128GB GDDR10",
       "details": "own all the games with nvidias new rtx graphics",
       "price": 4990,
       "vat": 0.25,
@@ -52,8 +47,7 @@
     },
     {
       "id": "5",
-      "name": "product 6",
-      "description": "Nvidia RTX 8096Ti 128GB GDDR10",
+      "name": "Nvidia RTX 8096Ti 128GB GDDR10",
       "details": "own all the games with nvidias new rtx graphics",
       "price": 8990,
       "vat": 0.25,
@@ -62,8 +56,7 @@
     },
     {
       "id": "6",
-      "name": "product 7",
-      "description": "Nvidia RTX 16384 256GB GDDR10",
+      "name": "Nvidia RTX 16384 256GB GDDR10",
       "details": "own all the games with nvidias new rtx graphics",
       "price": 10990,
       "vat": 0.25,
@@ -72,8 +65,7 @@
     },
     {
       "id": "7",
-      "name": "product 8",
-      "description": "Nvidia RTX 16384Ti 256GB GDDR10",
+      "name": "Nvidia RTX 16384Ti 256GB GDDR10",
       "details": "own all the games with nvidias new rtx graphics",
       "price": 4990,
       "vat": 0.25,
@@ -82,8 +74,7 @@
     },
     {
       "id": "8",
-      "name": "product 9",
-      "description": "Intel i9-17600K",
+      "name": "Intel i9-17600K",
       "details": "take multitasking to whole new levels with this intel i9 cpu, virtualization has never been easier",
       "price": 2990,
       "vat": 0.25,
@@ -92,8 +83,7 @@
     },
     {
       "id": "9",
-      "name": "product 10",
-      "description": "Intel i9-18600K",
+      "name": "Intel i9-18600K",
       "details": "take multitasking to whole new levels with this intel i9 cpu, virtualization has never been easier",
       "price": 3990,
       "vat": 0.25,
@@ -102,8 +92,7 @@
     },
     {
       "id": "10",
-      "name": "product 11",
-      "description": "Intel i9-19600K",
+      "name": "Intel i9-19600K",
       "details": "take multitasking to whole new levels with this intel i9 cpu, virtualization has never been easier",
       "price": 4990,
       "vat": 0.25,
@@ -112,8 +101,7 @@
     },
     {
       "id": "11",
-      "name": "product 12",
-      "description": "Intel i9-20600K",
+      "name": "Intel i9-20600K",
       "details": "take multitasking to whole new levels with this intel i9 cpu, virtualization has never been easier",
       "price": 5990,
       "vat": 0.25,
@@ -122,8 +110,7 @@
     },
     {
       "id": "12",
-      "name": "product 13",
-      "description": "BeQuiet Pure Power 76",
+      "name": "BeQuiet Pure Power 76",
       "details": "if you have ever been bothered by noise, this powersupply is guaranteed to lower the decibels of your workstation",
       "price": 1990,
       "vat": 0.25,
@@ -132,8 +119,7 @@
     },
     {
       "id": "13",
-      "name": "product 14",
-      "description": "BeQuiet Pure Power 80",
+      "name": "BeQuiet Pure Power 80",
       "details": "if you have ever been bothered by noise, this powersupply is guaranteed to lower the decibels of your workstation",
       "price": 2990,
       "vat": 0.25,
@@ -142,8 +128,7 @@
     },
     {
       "id": "14",
-      "name": "product 15",
-      "description": "BeQuiet Pure Power 95",
+      "name": "BeQuiet Pure Power 95",
       "details": "if you have ever been bothered by noise, this powersupply is guaranteed to lower the decibels of your workstation",
       "price": 3990,
       "vat": 0.25,
@@ -152,8 +137,7 @@
     },
     {
       "id": "15",
-      "name": "product 16",
-      "description": "BeQuiet Pure Power 100",
+      "name": "BeQuiet Pure Power 100",
       "details": "if you have ever been bothered by noise, this powersupply is guaranteed to lower the decibels of your workstation",
       "price": 4990,
       "vat": 0.25,
@@ -162,8 +146,7 @@
     },
     {
       "id": "16",
-      "name": "product 17",
-      "description": "Corsair Vengeance 128GB DDR7",
+      "name": "Corsair Vengeance 128GB DDR7",
       "details": "speed up your multitasking with corsair vengeance",
       "price": 990,
       "vat": 0.25,
@@ -172,8 +155,7 @@
     },
     {
       "id": "17",
-      "name": "product 18",
-      "description": "Corsair Vengeance 256GB DDR7",
+      "name": "Corsair Vengeance 256GB DDR7",
       "details": "speed up your multitasking with corsair vengeance",
       "price": 1990,
       "vat": 0.25,
@@ -182,8 +164,7 @@
     },
     {
       "id": "18",
-      "name": "product 19",
-      "description": "Corsair Vengeance 512GB DDR7",
+      "name": "Corsair Vengeance 512GB DDR7",
       "details": "speed up your multitasking with corsair vengeance",
       "price": 2990,
       "vat": 0.25,
@@ -192,8 +173,7 @@
     },
     {
       "id": "19",
-      "name": "product 20",
-      "description": "Corsair Vengeance 768GB DDR7",
+      "name": "Corsair Vengeance 768GB DDR7",
       "details": "speed up your multitasking with corsair vengeance",
       "price": 3990,
       "vat": 0.25,
@@ -202,8 +182,7 @@
     },
     {
       "id": "20",
-      "name": "product 21",
-      "description": "ASUS ROG OPTIMUS X7900 EXTREME",
+      "name": "ASUS ROG OPTIMUS X7900 EXTREME",
       "details": "take overclocking to whole new levels with asus new motherboards",
       "price": 7190,
       "vat": 0.25,
@@ -212,8 +191,7 @@
     },
     {
       "id": "21",
-      "name": "product 22",
-      "description": "ASUS ROG OPTIMUS X8900 EXTREME",
+      "name": "ASUS ROG OPTIMUS X8900 EXTREME",
       "details": "take overclocking to whole new levels with asus new motherboards",
       "price": 10190,
       "vat": 0.25,
@@ -222,8 +200,7 @@
     },
     {
       "id": "22",
-      "name": "product 23",
-      "description": "ASUS ROG OPTIMUS X9900 EXTREME",
+      "name": "ASUS ROG OPTIMUS X9900 EXTREME",
       "details": "take overclocking to whole new levels with asus new motherboards",
       "price": 13190,
       "vat": 0.25,
@@ -232,8 +209,7 @@
     },
     {
       "id": "23",
-      "name": "product 24",
-      "description": "ASUS ROG OPTIMUS X10900 EXTREME",
+      "name": "ASUS ROG OPTIMUS X10900 EXTREME",
       "details": "take overclocking to whole new levels with asus new motherboards",
       "price": 16190,
       "vat": 0.25,
@@ -242,8 +218,7 @@
     },
     {
       "id": "24",
-      "name": "product 25",
-      "description": "Raspberry Pi 7",
+      "name": "Raspberry Pi 7",
       "details": "unleash your curiosiy with raspberry pi and create incredible new inventions",
       "price": 370,
       "vat": 0.25,
@@ -252,8 +227,7 @@
     },
     {
       "id": "25",
-      "name": "product 26",
-      "description": "Raspberry Pi 8",
+      "name": "Raspberry Pi 8",
       "details": "unleash your curiosiy with raspberry pi and create incredible new inventions",
       "price": 470,
       "vat": 0.25,
@@ -262,8 +236,7 @@
     },
     {
       "id": "26",
-      "name": "product 27",
-      "description": "Raspberry Pi 9",
+      "name": "Raspberry Pi 9",
       "details": "unleash your curiosiy with raspberry pi and create incredible new inventions",
       "price": 570,
       "vat": 0.25,
@@ -272,8 +245,7 @@
     },
     {
       "id": "27",
-      "name": "product 28",
-      "description": "Raspberry Pi 10",
+      "name": "Raspberry Pi 10",
       "details": "unleash your curiosiy with raspberry pi and create incredible new inventions",
       "price": 670,
       "vat": 0.25,
@@ -282,8 +254,7 @@
     },
     {
       "id": "28",
-      "name": "product 29",
-      "description": "ASUS JP64 / i7-19700H / WIFI 9E ",
+      "name": "ASUS JP64 / i7-19700H / WIFI 9E ",
       "details": "enjoy this small formfactor computer from asus without compromising on power",
       "price": 6290,
       "vat": 0.25,
@@ -292,8 +263,7 @@
     },
     {
       "id": "29",
-      "name": "product 30",
-      "description": "ASUS JP128 / i7-20700H / WIFI 9E ",
+      "name": "ASUS JP128 / i7-20700H / WIFI 9E ",
       "details": "enjoy this small formfactor computer from asus without compromising on power",
       "price": 7290,
       "vat": 0.25,
@@ -302,8 +272,7 @@
     },
     {
       "id": "30",
-      "name": "product 31",
-      "description": "ASUS JP256 / i7-21700H / WIFI 9E ",
+      "name": "ASUS JP256 / i7-21700H / WIFI 9E ",
       "details": "enjoy this small formfactor computer from asus without compromising on power",
       "price": 8290,
       "vat": 0.25,
@@ -312,8 +281,7 @@
     },
     {
       "id": "31",
-      "name": "product 32",
-      "description": "ASUS JP512 / i7-22700H / WIFI 9E ",
+      "name": "ASUS JP512 / i7-22700H / WIFI 9E ",
       "details": "enjoy this small formfactor computer from asus without compromising on power",
       "price": 9290,
       "vat": 0.25,

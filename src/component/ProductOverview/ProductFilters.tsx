@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Flex from "../shared/Flex/Flex";
 import Button from "../shared/Button/Button";
 import { Collapse } from "../shared/Collapse/Collapse";
@@ -14,14 +14,13 @@ export const ProductFilters = () => {
       !product?.category ||
       acc.findIndex(
         (category) => category.props.category === product.category
-      ) !== -1
+      ) === -1
     )
-      return acc;
+      acc.push(
+        <CategoryButton key={product.category} category={product.category} />
+      );
 
-    return [
-      ...acc,
-      <CategoryButton key={product.category} category={product.category} />,
-    ];
+    return acc;
   }, [] as JSX.Element[]);
   return (
     <>

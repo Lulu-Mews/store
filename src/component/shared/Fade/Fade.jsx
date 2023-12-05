@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledFade } from "./styles";
 
 function Fade(props) {

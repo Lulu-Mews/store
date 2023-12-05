@@ -18,17 +18,15 @@ const CartOverview = () => {
         if (!acc.find((a) => a.id === curr.id)) acc.push(curr);
         return acc;
       }, [] as Product[])
-      .sort((a, b) => ((a.name || "") > (b.name || "") ? -1 : 1))
+      .sort((a, b) => (a.name > b.name ? -1 : 1))
       .map((product) => {
         const amount = state.reduce((acc, localProduct) => {
           return localProduct.name === product.name ? acc + 1 : acc;
         }, 0);
         setPrices((localprice) => {
           return {
-            prices: localprice.prices + (product.price || 0) * amount,
-            vat:
-              localprice.vat +
-              (product.vat || 0) * amount * (product.price || 0),
+            prices: localprice.prices + product.price * amount,
+            vat: localprice.vat + product.vat * amount * product.price,
           };
         });
         return (

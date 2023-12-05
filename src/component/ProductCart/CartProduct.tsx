@@ -48,7 +48,7 @@ const CartProduct: React.FC<{ product: Product; amount: number }> = ({
           src={product.images?.[0]}
           alt=""
         />
-        <Flex width="50%">{product.description}</Flex>
+        <Flex width="50%">{product.name}</Flex>
       </Flex>
       <Flex align="end" width="20%" isVertical>
         {priceFormatter.format(

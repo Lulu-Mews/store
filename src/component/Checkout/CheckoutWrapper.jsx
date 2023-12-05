@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutDelivery from "./CheckoutDelivery";
 import CheckoutOrder from "./CheckoutOrder";

@@ -1,4 +1,4 @@
-import React, { DragEvent, PropsWithChildren, useState } from "react";
+import { DragEvent, PropsWithChildren, useState } from "react";
 import { StyledFileDropper } from "./styles";
 import { SpacingProps } from "../../../interfaces";
 

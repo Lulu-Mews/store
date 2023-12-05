@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Image from "../shared/Image/Image";
 import Flex from "../shared/Flex/Flex";
@@ -23,9 +22,9 @@ const Product: React.FC<ProductProp> = (item) => {
     >
       {item.images?.[0] && <Image src={item.images[0]} alt="" />}
       <Flex height="100%" isVertical justify="space-between">
-        <h6 style={{ margin: 0 }}>{item.description}</h6>
+        <h6 style={{ margin: 0 }}>{item.name}</h6>
         <Flex justify="end" align="end" isVertical>
-          {priceFormatter.format(item.price || 0)}
+          {priceFormatter.format(item.price)}
           <h6 style={{ margin: 0 }}>{item.category}</h6>
         </Flex>
       </Flex>

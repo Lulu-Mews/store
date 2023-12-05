@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledText } from "./styles";
 
 function Text(props) {

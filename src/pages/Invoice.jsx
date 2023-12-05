@@ -1,4 +1,3 @@
-import React from "react";
 import Flex from "../component/shared/Flex/Flex";
 import Border from "../component/shared/Border/Border";
 import { useLocation } from "react-router-dom";

@@ -1,4 +1,3 @@
-import React from "react";
 import Flex from "../shared/Flex/Flex";
 import Text from "../shared/Text/Text";
 import { validateDelivery } from "./validators";

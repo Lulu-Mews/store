@@ -1,4 +1,3 @@
-import React from "react";
 import basket from "../../../assets/shopping-basket-ecommerce-svgrepo-com.svg";
 import logo from "../../../assets/flouncy_fox.svg";
 import login from "../../../assets/padlock-lock-svgrepo-com.svg";

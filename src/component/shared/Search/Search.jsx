@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Flex from "../Flex/Flex";
 import Button from "../Button/Button";
 import searchIcon from "../../../assets/search-svgrepo-com.svg";
@@ -24,15 +24,13 @@ function Search() {
   };
   const handleKeyPress = (event) => {
     if (event.key === "Enter") clickSearch();
-    console.log("handleKeyPress");
   };
   return (
     <Flex>
       <input
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
         value={search || ""}
         onChange={(e) => setSearchText(e.currentTarget.value)}
-        className="header__searchInput"
         type="text"
       />
       <Button onClick={clickSearch}>
