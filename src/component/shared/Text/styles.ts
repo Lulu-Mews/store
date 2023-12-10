@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-
-const getSpacing = ({ spacing }) => {
+import { SpacingProps } from "../../../interfaces";
+import { TextProps } from "./interfaces";
+const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
@@ -12,6 +13,8 @@ const getSpacing = ({ spacing }) => {
   return spacingString;
 };
 
-export let StyledImage = styled.img`
+export let StyledText = styled.div<TextProps & SpacingProps>`
+  ${(props) => (props?.fontSize ? `font-size: ${props?.fontSize};` : "")}
+  ${(props) => (props?.color ? `color: ${props?.color};` : "")}
   ${(props) => getSpacing(props)}
 `;

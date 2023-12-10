@@ -8,7 +8,7 @@ import Button from "../Button/Button";
 import Flex from "../Flex/Flex";
 import Search from "../Search/Search";
 
-function Header() {
+const Header: React.FC = () => {
   const navigate = useNavigate();
   const clickHandler = () => {
     navigate(`/order/`);
@@ -46,6 +46,6 @@ function Header() {
       </Flex>
     </StyledHeader>
   );
-}
+};
 
 export default Header;

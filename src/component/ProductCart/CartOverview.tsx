@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useGetCarts } from "../../context/cartContext";
-import Flex from "../shared/Flex/Flex";
+import Flex from "../shared/Flex";
 import CartProduct from "./CartProduct";
-import Button from "../shared/Button/Button";
+import Button from "../shared/Button";
 import { useNavigate } from "react-router-dom";
 import { Product } from "../../interfaces";
 

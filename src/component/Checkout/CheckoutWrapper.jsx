@@ -2,7 +2,7 @@ import { useState } from "react";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutDelivery from "./CheckoutDelivery";
 import CheckoutOrder from "./CheckoutOrder";
-import Flex from "../shared/Flex/Flex";
+import Flex from "../shared/Flex";
 
 function CheckoutWrapper() {
   const [user, setUser] = useState({});

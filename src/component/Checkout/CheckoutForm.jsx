@@ -1,4 +1,4 @@
-import Text from "../shared/Text/Text";
+import Text from "../shared/Text";
 import {
   validateCity,
   validateEmail,

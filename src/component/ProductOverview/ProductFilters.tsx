@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Flex from "../shared/Flex/Flex";
-import Button from "../shared/Button/Button";
-import { Collapse } from "../shared/Collapse/Collapse";
+import Flex from "../shared/Flex";
+import Button from "../shared/Button";
+import Collapse from "../shared/Collapse";
 import { useGetProducts } from "../../context/productContext";
 import CategoryButton from "./CategoryButton";
 

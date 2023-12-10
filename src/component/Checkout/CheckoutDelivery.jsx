@@ -1,5 +1,5 @@
-import Flex from "../shared/Flex/Flex";
-import Text from "../shared/Text/Text";
+import Flex from "../shared/Flex";
+import Text from "../shared/Text";
 import { validateDelivery } from "./validators";
 
 function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {

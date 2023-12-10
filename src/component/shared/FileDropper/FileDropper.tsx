@@ -2,7 +2,7 @@ import { DragEvent, PropsWithChildren, useState } from "react";
 import { StyledFileDropper } from "./styles";
 import { SpacingProps } from "../../../interfaces";
 
-export const FileDropper: React.FC<
+const FileDropper: React.FC<
   PropsWithChildren<
     SpacingProps & { onUpload?: (fileBuffer: ArrayBuffer) => void }
   >
@@ -34,3 +34,5 @@ export const FileDropper: React.FC<
     </StyledFileDropper>
   );
 };
+
+export default FileDropper;

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Image from "../shared/Image/Image";
-import Flex from "../shared/Flex/Flex";
+import Image from "../shared/Image";
+import Flex from "../shared/Flex";
 import { Product as ProductProp } from "../../interfaces";
 
 const Product: React.FC<ProductProp> = (item) => {

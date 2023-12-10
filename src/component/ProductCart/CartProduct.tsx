@@ -1,7 +1,7 @@
 import { useGetCarts } from "../../context/cartContext";
-import Flex from "../shared/Flex/Flex";
-import Button from "../shared/Button/Button";
-import Image from "../shared/Image/Image";
+import Flex from "../shared/Flex";
+import Button from "../shared/Button";
+import Image from "../shared/Image";
 import { Product } from "../../interfaces";
 
 const CartProduct: React.FC<{ product: Product; amount: number }> = ({
@@ -9,7 +9,7 @@ const CartProduct: React.FC<{ product: Product; amount: number }> = ({
   amount,
 }) => {
   const isMobile = (window.visualViewport?.width || 0) < 500;
-  const [_, setState] = useGetCarts();
+  const [, setState] = useGetCarts();
 
   const priceFormatter = new Intl.NumberFormat("sv-SE", {
     style: "currency",

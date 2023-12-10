@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { FadeComProps } from "./interfaces";
 
-export let StyledFade = styled.div`
+export let StyledFade = styled.div<FadeComProps>`
   content: "";
   position: absolute;
   z-index: -1;

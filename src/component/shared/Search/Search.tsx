@@ -9,12 +9,12 @@ import {
   useSearchParams,
 } from "react-router-dom";
 
-function Search() {
+const Search: React.FC = () => {
   const [query] = useSearchParams();
   const [search, setSearchText] = useState(query.get("query"));
   const navigate = useNavigate();
   const clickSearch = () => {
-    const urlEncodedSearch = encodeURI(search);
+    const urlEncodedSearch = encodeURI(search || "");
     navigate({
       pathname: "/products",
       search: createSearchParams({
@@ -22,7 +22,7 @@ function Search() {
       }).toString(),
     });
   };
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") clickSearch();
   };
   return (
@@ -38,6 +38,6 @@ function Search() {
       </Button>
     </Flex>
   );
-}
+};
 
 export default Search;

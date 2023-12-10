@@ -1,4 +1,4 @@
-import Button from "../shared/Button/Button";
+import Button from "../shared/Button";
 import { useNavigate } from "react-router-dom";
 import { validateDelivery, validateUser } from "./validators";
 

@@ -1,8 +1,8 @@
 import { useGetCarts } from "../../context/cartContext";
-import Flex from "../shared/Flex/Flex";
-import Image from "../shared/Image/Image";
-import Button from "../shared/Button/Button";
-import Border from "../shared/Border/Border";
+import Flex from "../shared/Flex";
+import Image from "../shared/Image";
+import Button from "../shared/Button";
+import Border from "../shared/Border";
 
 function Detail(item: any) {
   const isMobile = (window.visualViewport?.width || 0) < 500;

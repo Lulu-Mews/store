@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
-const getSpacing = ({ spacing }) => {
+import { ButtonProps } from "./interfaces";
+import { SpacingProps } from "../../../interfaces";
+const getSpacing = ({ spacing }: SpacingProps) => {
   if (!spacing) return "";
   const { top, bottom, right, left } = spacing;
   let spacingString = "";
@@ -10,7 +12,7 @@ const getSpacing = ({ spacing }) => {
   if (left) spacingString += `margin-left: ${left};`;
   return spacingString;
 };
-export let StyledButton = styled.button`
+export let StyledButton = styled.button<ButtonProps & SpacingProps>`
   background: ${({ theme }) => theme.color.primary};
   border: 1px solid ${({ theme }) => theme.color.secondary};
   border-radius: 8px;
