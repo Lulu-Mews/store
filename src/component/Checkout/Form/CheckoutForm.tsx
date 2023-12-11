@@ -1,4 +1,5 @@
-import Text from "../shared/Text";
+import { ChangeEvent } from "react";
+import Text from "../../shared/Text";
 import {
   validateCity,
   validateEmail,
@@ -8,10 +9,15 @@ import {
   validatePostalCode,
   validateStreet,
   validateTelephone,
-} from "./validators";
+} from "../validators";
+import { CheckoutFormProps } from "./interface";
 
-const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
-  const inputChange = (e, name) => {
+const CheckoutForm: React.FC<CheckoutFormProps> = ({
+  user,
+  setUser,
+  hasPressedOrder,
+}) => {
+  const inputChange = (e: ChangeEvent<HTMLInputElement>, name: string) => {
     const value = e.currentTarget.value;
 
     setUser?.((localState) => {
@@ -41,8 +47,8 @@ const CheckoutForm = ({ user, setUser, hasPressedOrder }) => {
       </Text>
 
       <input
-        value={user?.eMail || ""}
-        onChange={(e) => inputChange(e, "eMail")}
+        value={user?.email || ""}
+        onChange={(e) => inputChange(e, "email")}
         type="email"
         placeholder="E-mail"
       />

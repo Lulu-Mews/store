@@ -1,14 +1,14 @@
 import { useState } from "react";
-import CheckoutForm from "./CheckoutForm";
-import CheckoutDelivery from "./CheckoutDelivery";
-import CheckoutOrder from "./CheckoutOrder";
+import CheckoutForm from "./Form/CheckoutForm";
+import CheckoutDelivery from "./Delivery/CheckoutDelivery";
+import CheckoutOrder from "./Order/CheckoutOrder";
 import Flex from "../shared/Flex";
 
-function CheckoutWrapper() {
+const CheckoutWrapper: React.FC = () => {
   const [user, setUser] = useState({});
   const [hasPressedOrder, setHasPressedOrder] = useState(false);
-  const [delivery, setDelivery] = useState();
-  const isMobile = window.visualViewport.width < 500;
+  const [delivery, setDelivery] = useState("");
+  const isMobile = (window.visualViewport?.width || 0) < 500;
   return (
     <Flex justify="center">
       <Flex isVertical={isMobile} align="start" width="60%">
@@ -34,6 +34,6 @@ function CheckoutWrapper() {
       </Flex>
     </Flex>
   );
-}
+};
 
 export default CheckoutWrapper;

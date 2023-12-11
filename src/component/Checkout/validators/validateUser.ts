@@ -7,9 +7,10 @@ import {
   validateStreet,
   validateTelephone,
 } from ".";
+import { User } from "../interfaces";
 import validateCity from "./validateCity";
 
-const validateUser = (user) => {
+const validateUser = (user?: User): string => {
   let returnString = "";
   returnString = validateCity(user) || returnString;
   returnString = validateEmail(user) || returnString;

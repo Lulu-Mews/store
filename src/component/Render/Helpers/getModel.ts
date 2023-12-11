@@ -1,11 +1,15 @@
 import * as THREE from "three";
 
-const getModel = (geometry, wireframe) => {
+const getModel = (
+  geometry: THREE.BufferGeometry<THREE.NormalBufferAttributes>,
+  wireframe: boolean
+) => {
   if (wireframe) {
     const wireframe = new THREE.WireframeGeometry(geometry);
 
     const line = new THREE.LineSegments(wireframe);
     line.name = "wireframe";
+    if (Array.isArray(line.material)) return;
     line.material.depthTest = false;
     line.material.opacity = 0.25;
     line.material.transparent = true;

@@ -1,13 +1,19 @@
-import Flex from "../shared/Flex";
-import Text from "../shared/Text";
-import { validateDelivery } from "./validators";
+import React from "react";
+import Flex from "../../shared/Flex";
+import Text from "../../shared/Text";
+import { validateDelivery } from "../validators";
+import { CheckoutDeliveryProps } from "./interfaces";
 
-function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
+const CheckoutDelivery: React.FC<CheckoutDeliveryProps> = ({
+  setDelivery,
+  hasPressedOrder,
+  delivery,
+}) => {
   return (
     <Flex isVertical>
       <Flex>
         <input
-          onChange={(e) => setDelivery(e.currentTarget.value)}
+          onChange={(e) => setDelivery?.(e.currentTarget.value)}
           type="radio"
           name="Order_Method"
           value="Pickup"
@@ -17,7 +23,7 @@ function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
       </Flex>
       <Flex>
         <input
-          onChange={(e) => setDelivery(e.currentTarget.value)}
+          onChange={(e) => setDelivery?.(e.currentTarget.value)}
           type="radio"
           name="Order_Method"
           value="PostNord"
@@ -27,7 +33,7 @@ function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
       </Flex>
       <Flex>
         <input
-          onChange={(e) => setDelivery(e.currentTarget.value)}
+          onChange={(e) => setDelivery?.(e.currentTarget.value)}
           type="radio"
           name="Order_Method"
           value="DHL"
@@ -37,7 +43,7 @@ function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
       </Flex>
       <Flex>
         <input
-          onChange={(e) => setDelivery(e.currentTarget.value)}
+          onChange={(e) => setDelivery?.(e.currentTarget.value)}
           type="radio"
           name="Order_Method"
           value="Fedex"
@@ -50,6 +56,6 @@ function CheckoutDelivery({ setDelivery, hasPressedOrder, delivery }) {
       </Text>
     </Flex>
   );
-}
+};
 
 export default CheckoutDelivery;
