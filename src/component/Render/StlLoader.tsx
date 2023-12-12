@@ -58,7 +58,8 @@ function StlLoader() {
       const loader = new STLLoader();
       if (stlFile) {
         const geometry = loader.parse(stlFile);
-        scene.add(getModel(geometry, wireframe));
+        const model = getModel(geometry, wireframe);
+        if (model) scene.add(model);
       }
       renderer.render(scene, camera);
 

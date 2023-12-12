@@ -3,7 +3,7 @@ import * as THREE from "three";
 const getModel = (
   geometry: THREE.BufferGeometry<THREE.NormalBufferAttributes>,
   wireframe: boolean
-) => {
+): THREE.Object3D<THREE.Object3DEventMap> | undefined => {
   if (wireframe) {
     const wireframe = new THREE.WireframeGeometry(geometry);
 
