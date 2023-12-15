@@ -14,7 +14,8 @@ const Search: React.FC = () => {
   const [search, setSearchText] = useState(query.get("query"));
   const navigate = useNavigate();
   const clickSearch = () => {
-    const urlEncodedSearch = encodeURI(search || "");
+    if (!search) return;
+    const urlEncodedSearch = encodeURI(search);
     navigate({
       pathname: "/products",
       search: createSearchParams({

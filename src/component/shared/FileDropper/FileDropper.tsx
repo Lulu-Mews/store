@@ -1,12 +1,8 @@
-import { DragEvent, PropsWithChildren, useState } from "react";
+import { DragEvent, useState } from "react";
 import { StyledFileDropper } from "./styles";
-import { SpacingProps } from "../../../interfaces";
+import { FileDropperComponentProps } from "./interfaces";
 
-const FileDropper: React.FC<
-  PropsWithChildren<
-    SpacingProps & { onUpload?: (fileBuffer: ArrayBuffer) => void }
-  >
-> = ({ children, onUpload }) => {
+const FileDropper: React.FC<FileDropperComponentProps> = ({ children, onUpload }) => {
   const [isHovering, setIsHovering] = useState(false);
   const dropHandler = async (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();

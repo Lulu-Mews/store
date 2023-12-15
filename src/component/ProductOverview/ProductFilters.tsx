@@ -9,12 +9,12 @@ export const ProductFilters = () => {
   const isMobile = (window.visualViewport?.width || 0) < 500;
   const [collapsed, setCollapsed] = useState(isMobile);
   const products = useGetProducts();
-  const categories = products?.reduce((acc, product) => {
+  const categories = products?.reduce((acc,  product) => {
     if (
       !product?.category ||
-      acc.findIndex(
+      acc.find(
         (category) => category.props.category === product.category
-      ) === -1
+      ) 
     )
       acc.push(
         <CategoryButton key={product.category} category={product.category} />

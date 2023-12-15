@@ -52,7 +52,7 @@ const CartProduct: React.FC<{ product: Product; amount: number }> = ({
       </Flex>
       <Flex align="end" width="20%" isVertical>
         {priceFormatter.format(
-          (product.price || 0) * amount * ((product.vat || 0) + 1)
+          (product.price) * amount * ((product.vat) + 1)
         )}
         <Flex>
           <Button disabled={amount === 1} onClick={removeAmount}>
