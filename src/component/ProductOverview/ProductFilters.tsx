@@ -10,9 +10,10 @@ export const ProductFilters = () => {
   const [collapsed, setCollapsed] = useState(isMobile);
   const products = useGetProducts();
   const categories = products?.reduce((acc,  product) => {
+    console.log(product?.category)
     if (
-      !product?.category ||
-      acc.find(
+      product?.category &&
+      !acc.find(
         (category) => category.props.category === product.category
       ) 
     )
