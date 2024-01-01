@@ -5,7 +5,6 @@ import Notfound from "./pages/Notfound";
 import Login from "./pages/Login";
 import ProductDetails from "./pages/ProductDetails";
 import { ProductProvider } from "./context/productContext";
-import products from "./data/products.json";
 import { CartProvider } from "./context/cartContext";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./data/theme.json";
@@ -17,7 +16,7 @@ import StlViewer from "./pages/StlViewer";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ProductProvider initialState={products.item}>
+      <ProductProvider>
         <CartProvider initialState={[]}>
           <Fade
             width="100%"
